@@ -33,21 +33,21 @@
 import UIKit
 
 class CharacterDetailsViewController: UITableViewController {
-    let character: AllFilmsQuery.Data.AllFilm.Film.CharacterConnection.Character
+    let book: GetBooksQuery.Data.Book
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) is not implemented")
     }
 
-    init?(character: AllFilmsQuery.Data.AllFilm.Film.CharacterConnection.Character, coder: NSCoder) {
-        self.character = character
+    init?(character: GetBooksQuery.Data.Book, coder: NSCoder) {
+        self.book = character
 
         super.init(coder: coder)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = character.name
+        title = book.title
     }
 }
 
@@ -58,17 +58,11 @@ extension CharacterDetailsViewController {
 
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "Birth Year"
-            cell.detailTextLabel?.text = character.birthYear
+            cell.textLabel?.text = "Author"
+            cell.detailTextLabel?.text = book.author
         case 1:
-            cell.textLabel?.text = "Eye Color"
-            cell.detailTextLabel?.text = character.eyeColor
-        case 2:
-            cell.textLabel?.text = "Hair Color"
-            cell.detailTextLabel?.text = character.hairColor
-        case 3:
-            cell.textLabel?.text = "Home Planet"
-            cell.detailTextLabel?.text = character.homeworld?.name
+            cell.textLabel?.text = "Rating"
+            cell.detailTextLabel?.text = "\(book.rating ?? 0)"
         default:
             fatalError()
         }
@@ -76,7 +70,7 @@ extension CharacterDetailsViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

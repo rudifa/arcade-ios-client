@@ -33,7 +33,7 @@
 import UIKit
 
 class FilmsViewController: UITableViewController {
-    var films: [AllFilmsQuery.Data.AllFilm.Film] = []
+    var films: [GetBooksQuery.Data.Book] = []
 
     @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
         guard
@@ -42,7 +42,7 @@ class FilmsViewController: UITableViewController {
           else {
             return nil
         }
-        return FilmDetailsViewController(film: films[indexPath.row], coder: coder)
+        return FilmDetailsViewController(book: films[indexPath.row], coder: coder)
     }
 
     override func viewDidLoad() {
@@ -55,15 +55,15 @@ class FilmsViewController: UITableViewController {
 extension FilmsViewController {
     func loadData() {
         // 1
-        let query = AllFilmsQuery()
+        let query = GetBooksQuery()
         // 2
         Apollo.shared.client.fetch(query: query) { result in
             // 3
             switch result {
             case let .success(graphQLResult):
-                if let films = graphQLResult.data?.allFilms?.films?.compactMap({ $0 }) {
+                if let books = graphQLResult.data?.books?.compactMap({ $0 }) {
                     // 4
-                    self.films = films
+                    self.films = books
                     self.tableView.reloadData()
                 }
 
@@ -90,6 +90,6 @@ extension FilmsViewController {
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Films"
+        return "Books"
     }
 }

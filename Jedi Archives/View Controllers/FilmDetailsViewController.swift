@@ -33,39 +33,40 @@
 import UIKit
 
 class FilmDetailsViewController: UITableViewController {
-    private let film: AllFilmsQuery.Data.AllFilm.Film
+    private let book: GetBooksQuery.Data.Book
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) is not implemented")
     }
 
-    init?(film: AllFilmsQuery.Data.AllFilm.Film, coder: NSCoder) {
-        self.film = film
+    init?(book: GetBooksQuery.Data.Book, coder: NSCoder) {
+        self.book = book
 
         super.init(coder: coder)
     }
 
     @IBSegueAction func showCharacterDetails(_ coder: NSCoder, sender: Any?) -> CharacterDetailsViewController? {
-        guard
-            let cell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: cell),
-            let character = film.characterConnection?.characters?[indexPath.row]
-        else {
-            return nil
-        }
-
-        return CharacterDetailsViewController(character: character, coder: coder)
+//        guard
+//            let cell = sender as? UITableViewCell,
+//            let indexPath = tableView.indexPath(for: cell),
+//            let character = film.characterConnection?.characters?[indexPath.row]
+//        else {
+//            return nil
+//        }
+//
+//        return CharacterDetailsViewController(character: character, coder: coder)
+        return nil
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = film.title
+        title = book.title
     }
 }
 
 extension FilmDetailsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,27 +77,29 @@ extension FilmDetailsViewController {
 
             switch indexPath.row {
             case 0:
-                cell.textLabel?.text = "Episode"
-                if let episodeNumber = film.episodeId {
-                    cell.detailTextLabel?.text = "\(episodeNumber)"
+                cell.textLabel?.text = "Title"
+                if let title = book.title {
+                    cell.detailTextLabel?.text = "\(title)"
                 }
             case 1:
-                cell.textLabel?.text = "Released"
-                cell.detailTextLabel?.text = film.releaseDate
+                cell.textLabel?.text = "Author"
+                if let author = book.author {
+                    cell.detailTextLabel?.text = "\(author)"
+                }
             case 2:
-                cell.textLabel?.text = "Director"
-                cell.detailTextLabel?.text = film.director
+                cell.textLabel?.text = "Rating"
+                cell.detailTextLabel?.text = "\(book.rating ?? 0)"
             default:
                 fatalError()
             }
 
             return cell
-        case 1:
-            // swiftlint:disable:next force_unwrapping
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell")!
-            cell.textLabel?.text = film.characterConnection?.characters?[indexPath.row]?.name
-
-            return cell
+//        case 1:
+//            // swiftlint:disable:next force_unwrapping
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell")!
+//            cell.textLabel?.text = film.characterConnection?.characters?[indexPath.row]?.name
+//
+//            return cell
 
         default:
             fatalError()
@@ -107,14 +110,14 @@ extension FilmDetailsViewController {
         switch section {
         case 0:
             return 3
-        case 1:
-            return film.characterConnection?.characters?.count ?? 0
+//        case 1:
+//            return film.characterConnection?.characters?.count ?? 0
         default:
             fatalError()
         }
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "Info" : "Characters"
+        return section == 0 ? "Info" : ""
     }
 }
