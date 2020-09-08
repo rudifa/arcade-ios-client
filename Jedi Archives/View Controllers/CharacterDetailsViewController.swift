@@ -56,20 +56,22 @@ extension CharacterDetailsViewController {
         // swiftlint:disable:next force_unwrapping
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell")!
 
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
             cell.textLabel?.text = "Birth Year"
             cell.detailTextLabel?.text = character.birthYear
-        } else if indexPath.row == 1 {
+        case 1:
             cell.textLabel?.text = "Eye Color"
             cell.detailTextLabel?.text = character.eyeColor
-        } else if indexPath.row == 2 {
+        case 2:
             cell.textLabel?.text = "Hair Color"
             cell.detailTextLabel?.text = character.hairColor
-        } else if indexPath.row == 3 {
+        case 3:
             cell.textLabel?.text = "Home Planet"
             cell.detailTextLabel?.text = character.homeworld?.name
+        default:
+            fatalError()
         }
-
         return cell
     }
 

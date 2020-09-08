@@ -47,10 +47,10 @@ class FilmDetailsViewController: UITableViewController {
 
     @IBSegueAction func showCharacterDetails(_ coder: NSCoder, sender: Any?) -> CharacterDetailsViewController? {
         guard
-          let cell = sender as? UITableViewCell,
-          let indexPath = tableView.indexPath(for: cell),
-          let character = film.characterConnection?.characters?[indexPath.row]
-          else {
+            let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell),
+            let character = film.characterConnection?.characters?[indexPath.row]
+        else {
             return nil
         }
 
@@ -69,42 +69,49 @@ extension FilmDetailsViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
             // swiftlint:disable:next force_unwrapping
             let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
 
-            if indexPath.row == 0 {
+            switch indexPath.row {
+            case 0:
                 cell.textLabel?.text = "Episode"
                 if let episodeNumber = film.episodeId {
                     cell.detailTextLabel?.text = "\(episodeNumber)"
                 }
-            } else if indexPath.row == 1 {
+            case 1:
                 cell.textLabel?.text = "Released"
                 cell.detailTextLabel?.text = film.releaseDate
-            } else if indexPath.row == 2 {
+            case 2:
                 cell.textLabel?.text = "Director"
                 cell.detailTextLabel?.text = film.director
+            default:
+                fatalError()
             }
 
             return cell
-        } else if indexPath.section == 1 {
+        case 1:
             // swiftlint:disable:next force_unwrapping
             let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell")!
             cell.textLabel?.text = film.characterConnection?.characters?[indexPath.row]?.name
 
             return cell
-        } else {
+
+        default:
             fatalError()
         }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        switch section {
+        case 0:
             return 3
-        } else if section == 1 {
+        case 1:
             return film.characterConnection?.characters?.count ?? 0
+        default:
+            fatalError()
         }
-        return 0
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
