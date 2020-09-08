@@ -4,5 +4,9 @@
 
 [Source code zip](https://koenig-media.raywenderlich.com/uploads/2020/08/GraphQL-Materials.zip)
 
+Key Apollo/GraphQL steps:
 
+- edit `Queries.graphql` to define the schema
+- add the shell script that generates API.swift
+- use methods of the generated `GraphQLQuery` subclass to interact with the server started in the `SWAPI GraphQL` directory.
 
