@@ -1,35 +1,30 @@
-# 1
-query AllFilms {
-  # 2
-  allFilms {
-    # 3
-    films {
-      # 4
-      id
-      director
-      episodeID
-      title
-      releaseDate
-      
-      #5
-      characterConnection(first: 20) {
-        # 6
-        characters {
-          # 7
-          id
-          name
-          birthYear
-          eyeColor
-          hairColor
-          
-          # 8
-          homeworld {
-            # 9
-            name
-          }
-        }
-      }
-    }
-  }
+# gongfuio arcade
+directive @cacheControl(
+  maxAge: Int
+  scope: CacheControlScope
+) on FIELD_DEFINITION | OBJECT | INTERFACE
+# Exposes a URL that specifies the behaviour of this scalar.
+directive @specifiedBy(
+  # The URL that specifies the behaviour of this scalar.
+  url: String!
+) on SCALAR
+type Book {
+  title: String
+  author: String
+  rating: Int
 }
+
+enum CacheControlScope {
+  PUBLIC
+  PRIVATE
+}
+
+type Query {
+  books: [Book]
+}
+
+# The `Upload` scalar type
+ represents a file upload.
+scalar Upload
+
 

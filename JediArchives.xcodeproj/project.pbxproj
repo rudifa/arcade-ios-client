@@ -23,6 +23,9 @@
 		9D4DDFE7250785800008C86B /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE6250785800008C86B /* ApolloWebSocket */; };
 		9D4DDFE9250785800008C86B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE8250785800008C86B /* Apollo */; };
 		9D4DDFEB250785800008C86B /* ApolloCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFEA250785800008C86B /* ApolloCore */; };
+		9D4DDFF02507E5620008C86B /* Queries-jedi-archives-graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */; };
+		9D4DDFF22507EB180008C86B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFF12507EB180008C86B /* schema.json */; };
+		9D4DDFF42507FD870008C86B /* schema-json in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFF32507FD870008C86B /* schema-json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		558387722463867C00508A06 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		558387832463B27B00508A06 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9D4DDFED2507B8500008C86B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Queries-jedi-archives-graphql"; sourceTree = "<group>"; };
+		9D4DDFF12507EB180008C86B /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		9D4DDFF32507FD870008C86B /* schema-json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "schema-json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 		185CB1FA23C78CE6009F7571 /* Jedi Archives */ = {
 			isa = PBXGroup;
 			children = (
+				9D4DDFF12507EB180008C86B /* schema.json */,
+				9D4DDFF32507FD870008C86B /* schema-json */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
 				55838758246382E200508A06 /* GraphQL */,
@@ -122,6 +130,7 @@
 				558387832463B27B00508A06 /* API.swift */,
 				5583875A2463830A00508A06 /* Apollo.swift */,
 				5583875B2463830A00508A06 /* Queries.graphql */,
+				9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -205,8 +214,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
+				9D4DDFF02507E5620008C86B /* Queries-jedi-archives-graphql in Resources */,
 				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
 				5583875D2463830A00508A06 /* Queries.graphql in Resources */,
+				9D4DDFF42507FD870008C86B /* schema-json in Resources */,
+				9D4DDFF22507EB180008C86B /* schema.json in Resources */,
 				185CB20323C78CE6009F7571 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
