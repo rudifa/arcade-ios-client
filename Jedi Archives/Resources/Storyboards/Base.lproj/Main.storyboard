@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Arcade Books-->
+        <!--D-Arcade Books-->
         <scene sceneID="q2T-x1-WV6">
             <objects>
                 <tableViewController id="aDn-tp-oDu" customClass="FilmsViewController" customModule="Jedi_Archives" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <outlet property="delegate" destination="aDn-tp-oDu" id="rof-fi-1jE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Arcade Books" id="Brb-Sq-z2N"/>
+                    <navigationItem key="navigationItem" title="D-Arcade Books" id="Brb-Sq-z2N"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4MG-6c-Epz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
