@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "JediArchives" */;
+			buildConfigurationList = 185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "arcade-ios-client" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -445,7 +445,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "JediArchives" */ = {
+		185CB1F323C78CE6009F7571 /* Build configuration list for PBXProject "arcade-ios-client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				185CB20A23C78CE8009F7571 /* Debug */,
