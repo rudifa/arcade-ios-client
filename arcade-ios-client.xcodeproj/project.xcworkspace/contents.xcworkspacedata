@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/rudifarkas/GitHub/js-gong-fu/arcade-ios-client/arcade-ios-client.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "185CB1F723C78CE6009F7571"
-               BuildableName = "Jedi Archives.app"
-               BlueprintName = "Jedi Archives"
+               BuildableName = "arcade.app"
+               BlueprintName = "Arcade"
                ReferencedContainer = "container:arcade-ios-client.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "185CB1F723C78CE6009F7571"
-            BuildableName = "Jedi Archives.app"
-            BlueprintName = "Jedi Archives"
+            BuildableName = "arcade.app"
+            BlueprintName = "Arcade"
             ReferencedContainer = "container:arcade-ios-client.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "185CB1F723C78CE6009F7571"
-            BuildableName = "Jedi Archives.app"
-            BlueprintName = "Jedi Archives"
+            BuildableName = "arcade.app"
+            BlueprintName = "Arcade"
             ReferencedContainer = "container:arcade-ios-client.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
