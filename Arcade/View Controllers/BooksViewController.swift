@@ -32,17 +32,17 @@
 
 import UIKit
 
-class FilmsViewController: UITableViewController {
-    var films: [GetBooksQuery.Data.Book] = []
+class BooksViewController: UITableViewController {
+    var books: [GetBooksQuery.Data.Book] = []
 
-    @IBSegueAction func showFilmDetails(_ coder: NSCoder, sender: Any?) -> FilmDetailsViewController? {
+    @IBSegueAction func showBookDetails(_ coder: NSCoder, sender: Any?) -> BookDetailsViewController? {
         guard
           let cell = sender as? UITableViewCell,
           let indexPath = tableView.indexPath(for: cell)
           else {
             return nil
         }
-        return FilmDetailsViewController(book: films[indexPath.row], coder: coder)
+        return BookDetailsViewController(book: books[indexPath.row], coder: coder)
     }
 
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class FilmsViewController: UITableViewController {
     }
 }
 
-extension FilmsViewController {
+extension BooksViewController {
     func loadData() {
         // 1
         let query = GetBooksQuery()
@@ -63,7 +63,7 @@ extension FilmsViewController {
             case let .success(graphQLResult):
                 if let books = graphQLResult.data?.books?.compactMap({ $0 }) {
                     // 4
-                    self.films = books
+                    self.books = books
                     self.tableView.reloadData()
                 }
 
@@ -75,18 +75,18 @@ extension FilmsViewController {
     }
 }
 
-extension FilmsViewController {
+extension BooksViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable:next force_unwrapping
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
-        let film = films[indexPath.row]
-        cell.textLabel?.text = film.title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell")!
+        let book = books[indexPath.row]
+        cell.textLabel?.text = book.title
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return films.count
+        return books.count
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

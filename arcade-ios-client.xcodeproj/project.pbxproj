@@ -12,20 +12,18 @@
 		185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */; };
 		185CB20323C78CE6009F7571 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20123C78CE6009F7571 /* Main.storyboard */; };
 		185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185CB20423C78CE8009F7571 /* Assets.xcassets */; };
-		551DDCC52474C219008DF2D2 /* FilmDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551DDCC42474C219008DF2D2 /* FilmDetailsViewController.swift */; };
+		551DDCC52474C219008DF2D2 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551DDCC42474C219008DF2D2 /* BookDetailsViewController.swift */; };
 		551DDCC72474C68F008DF2D2 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551DDCC62474C68F008DF2D2 /* CharacterDetailsViewController.swift */; };
 		5583875C2463830A00508A06 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5583875A2463830A00508A06 /* Apollo.swift */; };
 		5583875D2463830A00508A06 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 5583875B2463830A00508A06 /* Queries.graphql */; };
-		558387732463867C00508A06 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558387722463867C00508A06 /* FilmsViewController.swift */; };
+		558387732463867C00508A06 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558387722463867C00508A06 /* BooksViewController.swift */; };
 		558387842463B27B00508A06 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558387832463B27B00508A06 /* API.swift */; };
 		9D4DDFE3250785800008C86B /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE2250785800008C86B /* ApolloCodegenLib */; };
 		9D4DDFE5250785800008C86B /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE4250785800008C86B /* ApolloSQLite */; };
 		9D4DDFE7250785800008C86B /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE6250785800008C86B /* ApolloWebSocket */; };
 		9D4DDFE9250785800008C86B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFE8250785800008C86B /* Apollo */; };
 		9D4DDFEB250785800008C86B /* ApolloCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4DDFEA250785800008C86B /* ApolloCore */; };
-		9D4DDFF02507E5620008C86B /* Queries-jedi-archives-graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */; };
 		9D4DDFF22507EB180008C86B /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFF12507EB180008C86B /* schema.json */; };
-		9D4DDFF42507FD870008C86B /* schema-json in Resources */ = {isa = PBXBuildFile; fileRef = 9D4DDFF32507FD870008C86B /* schema-json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,16 +34,14 @@
 		185CB20223C78CE6009F7571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185CB20423C78CE8009F7571 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		185CB20923C78CE8009F7571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		551DDCC42474C219008DF2D2 /* FilmDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsViewController.swift; sourceTree = "<group>"; };
+		551DDCC42474C219008DF2D2 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		551DDCC62474C68F008DF2D2 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		5583875A2463830A00508A06 /* Apollo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		5583875B2463830A00508A06 /* Queries.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
-		558387722463867C00508A06 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
+		558387722463867C00508A06 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		558387832463B27B00508A06 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		9D4DDFED2507B8500008C86B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Queries-jedi-archives-graphql"; sourceTree = "<group>"; };
 		9D4DDFF12507EB180008C86B /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		9D4DDFF32507FD870008C86B /* schema-json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "schema-json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				9D4DDFF12507EB180008C86B /* schema.json */,
-				9D4DDFF32507FD870008C86B /* schema-json */,
 				185CB1FB23C78CE6009F7571 /* AppDelegate.swift */,
 				185CB1FD23C78CE6009F7571 /* SceneDelegate.swift */,
 				55838758246382E200508A06 /* GraphQL */,
@@ -117,8 +112,8 @@
 		558387572463826800508A06 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				558387722463867C00508A06 /* FilmsViewController.swift */,
-				551DDCC42474C219008DF2D2 /* FilmDetailsViewController.swift */,
+				558387722463867C00508A06 /* BooksViewController.swift */,
+				551DDCC42474C219008DF2D2 /* BookDetailsViewController.swift */,
 				551DDCC62474C68F008DF2D2 /* CharacterDetailsViewController.swift */,
 			);
 			path = "View Controllers";
@@ -130,7 +125,6 @@
 				558387832463B27B00508A06 /* API.swift */,
 				5583875A2463830A00508A06 /* Apollo.swift */,
 				5583875B2463830A00508A06 /* Queries.graphql */,
-				9D4DDFEF2507E5620008C86B /* Queries-jedi-archives-graphql */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -160,7 +154,7 @@
 			);
 			dependencies = (
 			);
-			name = "Arcade";
+			name = Arcade;
 			packageProductDependencies = (
 				9D4DDFE2250785800008C86B /* ApolloCodegenLib */,
 				9D4DDFE4250785800008C86B /* ApolloSQLite */,
@@ -214,10 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				180DC61523C78D9800486B1A /* LaunchScreen.storyboard in Resources */,
-				9D4DDFF02507E5620008C86B /* Queries-jedi-archives-graphql in Resources */,
 				185CB20523C78CE8009F7571 /* Assets.xcassets in Resources */,
 				5583875D2463830A00508A06 /* Queries.graphql in Resources */,
-				9D4DDFF42507FD870008C86B /* schema-json in Resources */,
 				9D4DDFF22507EB180008C86B /* schema.json in Resources */,
 				185CB20323C78CE6009F7571 /* Main.storyboard in Resources */,
 			);
@@ -271,8 +263,8 @@
 				551DDCC72474C68F008DF2D2 /* CharacterDetailsViewController.swift in Sources */,
 				185CB1FC23C78CE6009F7571 /* AppDelegate.swift in Sources */,
 				5583875C2463830A00508A06 /* Apollo.swift in Sources */,
-				558387732463867C00508A06 /* FilmsViewController.swift in Sources */,
-				551DDCC52474C219008DF2D2 /* FilmDetailsViewController.swift in Sources */,
+				558387732463867C00508A06 /* BooksViewController.swift in Sources */,
+				551DDCC52474C219008DF2D2 /* BookDetailsViewController.swift in Sources */,
 				185CB1FE23C78CE6009F7571 /* SceneDelegate.swift in Sources */,
 				558387842463B27B00508A06 /* API.swift in Sources */,
 			);

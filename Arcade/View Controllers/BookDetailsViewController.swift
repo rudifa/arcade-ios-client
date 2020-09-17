@@ -32,7 +32,7 @@
 
 import UIKit
 
-class FilmDetailsViewController: UITableViewController {
+class BookDetailsViewController: UITableViewController {
     private let book: GetBooksQuery.Data.Book
 
     required init?(coder: NSCoder) {
@@ -49,7 +49,7 @@ class FilmDetailsViewController: UITableViewController {
 //        guard
 //            let cell = sender as? UITableViewCell,
 //            let indexPath = tableView.indexPath(for: cell),
-//            let character = film.characterConnection?.characters?[indexPath.row]
+//            let character = book.characterConnection?.characters?[indexPath.row]
 //        else {
 //            return nil
 //        }
@@ -64,7 +64,7 @@ class FilmDetailsViewController: UITableViewController {
     }
 }
 
-extension FilmDetailsViewController {
+extension BookDetailsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -73,7 +73,7 @@ extension FilmDetailsViewController {
         switch indexPath.section {
         case 0:
             // swiftlint:disable:next force_unwrapping
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FilmCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell")!
 
             switch indexPath.row {
             case 0:
@@ -97,7 +97,7 @@ extension FilmDetailsViewController {
 //        case 1:
 //            // swiftlint:disable:next force_unwrapping
 //            let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell")!
-//            cell.textLabel?.text = film.characterConnection?.characters?[indexPath.row]?.name
+//            cell.textLabel?.text = book.characterConnection?.characters?[indexPath.row]?.name
 //
 //            return cell
 
@@ -111,7 +111,7 @@ extension FilmDetailsViewController {
         case 0:
             return 3
 //        case 1:
-//            return film.characterConnection?.characters?.count ?? 0
+//            return book.characterConnection?.characters?.count ?? 0
         default:
             fatalError()
         }

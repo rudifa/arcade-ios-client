@@ -1,12 +1,14 @@
 #  arcade ios client
 
 
-Morphed by Rudi Farkas @rudifa from tutorial code `Jedi Archives` in
+
+Based on article and tutorial source code:
 
 [GraphQL Using the Apollo Framework: Getting Started](https://www.raywenderlich.com/10886648-graphql-using-the-apollo-framework-getting-started)
 
 [Source code zip](https://koenig-media.raywenderlich.com/uploads/2020/08/GraphQL-Materials.zip)
 
+Morphed by Rudi Farkas @rudifa from tutorial code to work with server `olange/arcade/engine`.
 
 Key Apollo/GraphQL steps:
 
